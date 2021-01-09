@@ -1,4 +1,7 @@
 class ShoesController < ApplicationController
+      
     def index 
-    end
+        shoes = Shoe.all
+        render json: shoes, include: [:brand]
+      end
 end
